@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.jujuba-image {
+  opacity: 1;
+}
+
+.jujuba-menu {
+  display: none;
+}
+
+.bl {
+  display: none;
+}
+
+
+@media (max-width: 768px) {
+  .jujuba-image {
+    display: none;
+  }
+
+  .jujuba-menu {
+    display: block
+  }
+
+}

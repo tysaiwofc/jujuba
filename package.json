@@ -1,0 +1,41 @@
+{
+  "name": "website",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "canvas": "^2.11.2",
+    "discord.js": "^14.13.0",
+    "dotenv": "^16.3.1",
+    "gm": "^1.25.0",
+    "jsonwebtoken": "^9.0.2",
+    "lucide-react": "^0.286.0",
+    "next": "13.5.4",
+    "next-auth": "^4.23.2",
+    "node-cache": "^5.1.2",
+    "node-canvas-with-twemoji-and-discord-emoji": "^1.2.1",
+    "pg": "^8.11.3",
+    "react": "^18",
+    "react-dom": "^18",
+    "sequelize": "^6.33.0",
+    "zlib": "^1.0.5"
+  },
+  "devDependencies": {
+    "@types/gm": "^1.25.2",
+    "@types/jsonwebtoken": "^9.0.3",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10",
+    "eslint": "^8",
+    "eslint-config-next": "13.5.4",
+    "postcss": "^8",
+    "tailwindcss": "^3",
+    "typescript": "^5"
+  }
+}
