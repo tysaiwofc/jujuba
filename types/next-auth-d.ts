@@ -8,7 +8,9 @@ declare module "next-auth" {
     user: {
       /** Oauth access token */
       token?: string | null;
-      id?: string | null
+      id?: string | null;
+      guilds?: Array<object> | []
+      botGuilds?: any
     } & DefaultSession["user"];
   }
 }

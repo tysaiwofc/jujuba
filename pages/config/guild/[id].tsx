@@ -1,11 +1,12 @@
-import { useSession, signIn, signOut } from 'next-auth/react';
+import { useSession, signIn } from 'next-auth/react';
 import { Home as HomeIcon } from 'lucide-react';
 import User from '@components/User';
 import Server from '@components/Server';
+import { useRouter } from 'next/router';
 import Config from '@components/Config';
 
 export default function Home() {
-
+  const router = useRouter();
   const { data: session } = useSession();
   const guilds = session?.user.guilds as Array<object | any>;
   let servers;
@@ -20,7 +21,8 @@ export default function Home() {
       servers = filteredServers // Atualize o estado com a lista de servidores filtrados
     }
 
-  if (session) return (
+  if (session) {
+    return (
       <div className="flex-row flex flex-auto content-center">
         <nav className="nav h-screen">
           <a href="/" className="user flex flex-row content-center justify-start rounded content-center items-center p-2 m-2">
@@ -35,8 +37,7 @@ export default function Home() {
                 name={server.name}
                 icon={server.icon}
                 id={server.id}
-                display={false}
-                add={false}
+                display={router.query.id === server.id ? true : false}
               ></Server>
             ))}
           </div>
@@ -51,15 +52,11 @@ export default function Home() {
         <Config/>
       </div>
     );
-  
-
-  
+  }
 
   return (
     <div className="flex-col h-screen w-screen flex flex-auto content-center items-center bg-pink-500 justify-center">
       <div className="lds-ripple"><div></div><div></div></div>
     </div>
   );
-
-  
 }

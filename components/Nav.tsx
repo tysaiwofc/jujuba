@@ -29,11 +29,10 @@ const Navbar = () => {
                 <a className="text-zinc-200 mx-3 jujuba-image" href="/staffs">
                     Equipe
                 </a>
-                <Link href="/support">
-                <a className="text-zinc-200 mx-3 jujuba-image">
+                <a className="text-zinc-200 mx-3 jujuba-image" href="/support">
                     Suporte
                 </a>
-                </Link>
+
  
             </div>
             <div className='flex-none '>

@@ -3,26 +3,79 @@
 @tailwind utilities;
 
 .nav {
-    max-width: 12rem;
+    max-width: 14rem;
     width: 100%;
+    display: flex;
+    flex-direction: column;
     box-shadow: 0.34px 0 0 0 rgba(169, 8, 184, 0.322);
+    background-image: linear-gradient(to right, #9a1d86, #8015be);
 }
 
 .user {
     cursor: pointer;
     background-color: rgb(197, 50, 211);
     color: white;
+    
 }
 
+.lds-ripple {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-ripple div {
+    position: absolute;
+    border: 4px solid #fff;
+    opacity: 1;
+    border-radius: 50%;
+    animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  }
+  .lds-ripple div:nth-child(2) {
+    animation-delay: -0.5s;
+  }
+  @keyframes lds-ripple {
+    0% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+    4.9% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+    5% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 1;
+    }
+    100% {
+      top: 0px;
+      left: 0px;
+      width: 72px;
+      height: 72px;
+      opacity: 0;
+    }
+  }
+
+  
 .space-x-4 {
     margin-left: 7px;
 }
 
 .server-container {
     overflow: auto;
+    flex-grow: 1;
     width: 100%;
-    max-height: 520px;
-    height: 100vh;
+    /* max-height: 650px;*/
+    height: 100%; 
     color: rgba(253, 248, 248, 0.973)
 }
 
@@ -36,10 +89,37 @@
 .server {
     padding: 7px;
     cursor: pointer;
+    max-height: 40px;
+    height: 100%;
 }
 
 .server:hover {
     background-image: linear-gradient(to top, rgb(236, 115, 247), rgb(246, 168, 253));
+   
+}
+
+.server-2 {
+    padding: 7px;
+    cursor: pointer;
+    max-height: 40px;
+    height: 100%;
+    background-image: linear-gradient(to top, rgb(236, 115, 247), rgb(246, 168, 253));
+}
+
+.server-2:hover {
+    background-image: linear-gradient(to top, rgb(228, 6, 248), rgb(246, 168, 253));
+}
+
+.server-3 {
+    padding: 7px;
+    cursor: pointer;
+    max-height: 40px;
+    height: 100%;
+    background-color: rgb(4, 187, 19)
+}
+
+.server-3:hover {
+    background-color: rgb(5, 247, 25)
 }
 
 .user:hover {
